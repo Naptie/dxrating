@@ -21,7 +21,7 @@ export function generateRatingSvg(rating: number, plate: string): string {
   const digits = rating.toString()
   const startX = 5 - digits.length - 1
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="20px">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="91.94px" height="18px">
     <image href="${plate}" x="0" y="0" height="1.2em"/>
     ${digits.split('').map((char, i) => `
       <text
