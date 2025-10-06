@@ -1,20 +1,34 @@
 {
   "name": "dxrating",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.6.4",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
+    "dev:node": "tsx watch src/server.ts",
     "start": "wrangler dev",
+    "start:node": "node dist/server.js",
+    "start:node:dev": "tsx src/server.ts",
+    "build": "tsc --noEmit",
+    "build:node": "tsc -p tsconfig.node.json",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "prebuild:node": "npm run clean",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.10.1",
     "@cloudflare/workers-types": "^4.20250317.0",
+    "@types/node": "^22.18.8",
     "eslint": "^9.22.0",
     "eslint-plugin-format": "^1.0.1",
+    "tsx": "^4.20.6",
     "typescript": "^5.8.2",
     "wrangler": "^4.1.0"
   }

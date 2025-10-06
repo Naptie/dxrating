@@ -1,9 +1,9 @@
 // https://github.com/ekkusu-3800mhz/maimai-b50-simulator
 // https://github.com/ekkusu-3800mhz/maimai-b50-simulator/pull/1
 
-import type { DivingFishResponse } from '../types/divingfish'
-import type { ILuoXueResponse } from '../types/luoxue'
-import { sumRa, updateRa } from './achievement'
+import type { DivingFishResponse } from '../types/divingfish.js'
+import type { ILuoXueResponse } from '../types/luoxue.js'
+import { sumRa, updateRa } from './achievement.js'
 
 export function divingFishB50(data: DivingFishResponse, calc: boolean = true) {
   if (calc) {

@@ -1,9 +1,9 @@
-import { divingFishB50, luoxueB50 } from './b50'
-import { generateRatingSvg, getPlateId } from './common'
-import { getDivingFishData } from './divingfish'
-import { getLuoxueData } from './luoxue'
-import plates from './plates'
-import Root from './root'
+import { divingFishB50, luoxueB50 } from './b50/index.js'
+import { generateRatingSvg, getPlateId } from './common.js'
+import { getDivingFishData } from './divingfish.js'
+import { getLuoxueData } from './luoxue.js'
+import plates from './plates.js'
+import Root from './root.js'
 
 // Interface for rating data providers
 interface RatingProvider {

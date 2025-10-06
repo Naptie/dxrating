@@ -1,4 +1,4 @@
-import type { DivingFishMusicChart } from '../types/divingfish'
+import type { DivingFishMusicChart } from '../types/divingfish.js'
 
 // Enum of achievements
 enum Achievement {
