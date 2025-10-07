@@ -25,8 +25,8 @@ export function generateRatingSvg(rating: number, plate: string): string {
     <image href="${plate}" x="0" y="0" width="664" height="130"/>
     ${digits.split('').map((char, i) => `
       <text
-        x="${321 + (startX + i + 1) * 52.4}"
-        y="87"
+        x="${320 + (startX + i + 1) * 52.4}"
+        y="88"
         font-family="ui-monospace, Monaco, 'JetBrains Mono Variable', 'JetBrains Mono', Monospaced, monospace, sans-serif"
         font-size="58"
         fill="#FCD41B">
