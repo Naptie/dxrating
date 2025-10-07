@@ -21,14 +21,14 @@ export function generateRatingSvg(rating: number, plate: string): string {
   const digits = rating.toString()
   const startX = 5 - digits.length - 1
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="91.94px" height="18px">
-    <image href="${plate}" x="0" y="0" height="1.2em"/>
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 664 130" width="100%" height="auto" style="max-width: 664px;">
+    <image href="${plate}" x="0" y="0" width="664" height="130"/>
     ${digits.split('').map((char, i) => `
       <text
-        x="${4.9 + (startX + i + 1) * 0.8}em"
-        y="1.45em"
-        font-family="Monaco, 'JetBrains Mono', Monospaced, monospace"
-        font-size="0.6em"
+        x="${321 + (startX + i + 1) * 52.4}"
+        y="87"
+        font-family="Monaco, 'JetBrains Mono Variable', 'JetBrains Mono', Monospaced, monospace"
+        font-size="58"
         fill="#FCD41B">
         ${char}
       </text>`).join('')}
