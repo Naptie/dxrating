@@ -49,7 +49,12 @@ class ImageGenerationHandler extends RatingHandler {
     const svg = generateRatingSvg(rating, plate)
 
     return new Response(svg, {
-      headers: { 'Content-Type': 'image/svg+xml' },
+      headers: {
+        'Content-Type': 'image/svg+xml',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
     })
   }
 }
